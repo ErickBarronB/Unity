@@ -14,6 +14,7 @@ public class clientScript : MonoBehaviour
     public List<addItem> shelfIndex = new List<addItem>();
     private addItem ShelfSelected;
 
+
     private void Awake()
     {
         
