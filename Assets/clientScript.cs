@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class clientScript : MonoBehaviour
@@ -8,23 +11,45 @@ public class clientScript : MonoBehaviour
     public float moveSpeed;
     private Rigidbody rb;
     private GameObject objectToPickup;
-    public List<addItem> itemSpots = new List<addItem>();
+    public List<addItem> shelfIndex = new List<addItem>();
+    private addItem ShelfSelected;
 
     private void Awake()
     {
+        
         rb = GetComponent<Rigidbody>();
     }
     void Start()
     {
-        
+        objectToPickup = null;
+        ShelfSelected = shelfSelected();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (objectToPickup != null)
+
+        
+
+        if (ShelfSelected.shelfItems.Count == 0 ) 
         {
-            
+            ShelfSelected = shelfSelected();
         }
+
+        if (ShelfSelected.shelfItems.Count > 0)
+        {
+            objectToPickup = ShelfSelected.shelfItems.Last();
+            rb.MovePosition(ShelfSelected.transform.position);
+        }
+
     }
+
+
+    public addItem shelfSelected()
+    {
+        if (shelfIndex.Count == 0) return null;
+        int index = UnityEngine.Random.Range(0, shelfIndex.Count);
+        return shelfIndex[index];
+    }
+
 }

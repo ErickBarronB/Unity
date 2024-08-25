@@ -11,7 +11,7 @@ public class addItem : MonoBehaviour
     public GameObject itemPrefab;
 
     public List<Vector3> itemPosition = new List<Vector3>();
-    private Stack<GameObject> shelfItems = new Stack<GameObject>();
+    [HideInInspector] public Stack<GameObject> shelfItems = new Stack<GameObject>();
 
     void Update()
     {
