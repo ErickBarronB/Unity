@@ -39,7 +39,7 @@ public class clientScript : MonoBehaviour
         if (ShelfSelected.shelfItems.Count > 0)
         {
             objectToPickup = ShelfSelected.shelfItems.Last();
-            rb.MovePosition(ShelfSelected.transform.position);
+            rb.MovePosition(Vector3.MoveTowards(rb.position, ShelfSelected.transform.position, moveSpeed * Time.deltaTime));
         }
 
     }
