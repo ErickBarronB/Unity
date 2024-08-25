@@ -121,3 +121,9 @@ MonoBehaviour:
   shelf:
     serializedVersion: 2
     m_Bits: 8
+  positionToAddItem: {x: 0, y: 0, z: 0}
+  positionOffset: 0
+  listLength: 0
+  listCap: 0
+  itemPrefab: {fileID: 0}
+  itemPosition: []

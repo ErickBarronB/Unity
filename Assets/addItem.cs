@@ -1,127 +1,67 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Jobs;
 using UnityEngine;
 
 public class addItem : MonoBehaviour
 {
-    // Start is called before the first frame update
     private int positionIndex;
-    public LayerMask shelf;
+    public LayerMask shelfLayer;
     public Vector3 positionToAddItem;
     public float positionOffset;
-    public int listLength;
     public int listCap;
     public GameObject itemPrefab;
 
     public List<Vector3> itemPosition = new List<Vector3>();
     private Stack<GameObject> shelfItems = new Stack<GameObject>();
-    void Start()
-    {
-
-    }
 
     void Update()
     {
-        positionIndex = itemPosition.Count;
-
-        listUpdate(positionIndex);
-        UpdateItem(positionIndex);
+        if (detectedShelf(out RaycastHit hit))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                AddItemToShelf(hit.transform);
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                RemoveItemFromShelf(hit.transform);
+            }
+        }
     }
 
-
-    public void UpdateItem(int positionIndex)
+    private void AddItemToShelf(Transform shelfTransform)
     {
-        int vectorIndex = positionIndex;
-        if (Input.GetMouseButtonDown(0) && detectedShelf())
+        if (itemPosition.Count < listCap)
         {
+            Vector3 newPosition = shelfTransform.position + positionToAddItem;
+            itemPosition.Add(newPosition);
+            positionToAddItem += new Vector3(0, 0, positionOffset);
 
-            if (vectorIndex < listCap)
-            {
-                GameObject createdItem = Instantiate(itemPrefab, transform);
-                shelfItems.Push(createdItem);
-                createdItem.transform.position = itemPosition[vectorIndex];
-                vectorIndex++;
-            }
-
-
+            GameObject createdItem = Instantiate(itemPrefab, shelfTransform);
+            shelfItems.Push(createdItem);
+            createdItem.transform.position = newPosition;
         }
-
-        if (Input.GetMouseButtonDown(1) && detectedShelf())
-        {
-        if (vectorIndex > 0)
-            {
-                Destroy(shelfItems.Pop());
-                vectorIndex--;
-            }
-
-
-        }
-
-
     }
 
-
-
-
-
-    private bool detectedShelf()
+    private void RemoveItemFromShelf(Transform shelfTransform)
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if (itemPosition.Count > 0)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            Destroy(shelfItems.Pop());
+            itemPosition.RemoveAt(itemPosition.Count - 1);
+            positionToAddItem -= new Vector3(0, 0, positionOffset);
+        }
+    }
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, shelf))
-            {
-                Debug.Log("Hit Shelf");
-                return true;
-            }
+    private bool detectedShelf(out RaycastHit hit)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, shelfLayer))
+        {
+            return hit.transform == transform; // Ensure it only interacts with the current shelf
         }
 
-
-
+        hit = default;
         return false;
-    }
-
-
-    public void listUpdate(int positionIndex)
-    {
-        if (detectedShelf())
-        {
-
-            if (listLength < listCap)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    if (listLength >= 0)
-                    {
-
-                        itemPosition.Add(transform.position + positionToAddItem);
-                        listLength++;
-                        positionToAddItem += new Vector3(0, 0, positionOffset);
-
-                    }
-
-                }
-
-            }
-
-            if (Input.GetMouseButtonDown(1))
-            {
-                if (itemPosition.Count > 0 && listLength > 0)
-                {
-                    itemPosition.RemoveAt(positionIndex - 1);
-                    positionToAddItem -= new Vector3(0, 0, positionOffset);
-                    listLength--;
-                }
-
-            }
-
-        }
-
-
-
     }
 }
