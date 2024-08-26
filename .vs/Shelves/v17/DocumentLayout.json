@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\weeds\\Shelves\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|c:\\users\\weeds\\shelves\\assets\\clientqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|solutionrelative:assets\\clientqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|c:\\users\\weeds\\shelves\\assets\\clientscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|solutionrelative:assets\\clientscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|c:\\users\\weeds\\shelves\\assets\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|c:\\users\\weeds\\shelves\\assets\\moneyupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|solutionrelative:assets\\moneyupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|C:\\Users\\weeds\\Shelves\\assets\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{078F2B7F-A0C6-BC66-0149-22C5A522A7B0}|Assembly-CSharp.csproj|solutionrelative:assets\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,28 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ClientQueue.cs",
+              "DocumentMoniker": "C:\\Users\\weeds\\Shelves\\Assets\\ClientQueue.cs",
+              "RelativeDocumentMoniker": "Assets\\ClientQueue.cs",
+              "ToolTip": "C:\\Users\\weeds\\Shelves\\Assets\\ClientQueue.cs",
+              "RelativeToolTip": "Assets\\ClientQueue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T01:10:46.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "moneyUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\weeds\\Shelves\\Assets\\moneyUpdate.cs",
+              "RelativeDocumentMoniker": "Assets\\moneyUpdate.cs",
+              "ToolTip": "C:\\Users\\weeds\\Shelves\\Assets\\moneyUpdate.cs",
+              "RelativeToolTip": "Assets\\moneyUpdate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T00:53:56.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "clientScript.cs",
               "DocumentMoniker": "C:\\Users\\weeds\\Shelves\\Assets\\clientScript.cs",
               "RelativeDocumentMoniker": "Assets\\clientScript.cs",
               "ToolTip": "C:\\Users\\weeds\\Shelves\\Assets\\clientScript.cs",
               "RelativeToolTip": "Assets\\clientScript.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAmAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAswA8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T23:23:02.825Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "addItem.cs",
               "DocumentMoniker": "C:\\Users\\weeds\\Shelves\\Assets\\addItem.cs",
               "RelativeDocumentMoniker": "Assets\\addItem.cs",
               "ToolTip": "C:\\Users\\weeds\\Shelves\\Assets\\addItem.cs",
               "RelativeToolTip": "Assets\\addItem.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwDUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T18:19:52.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T18:19:52.82Z"
             }
           ]
         }

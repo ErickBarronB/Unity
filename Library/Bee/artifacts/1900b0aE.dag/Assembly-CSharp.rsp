@@ -355,6 +355,7 @@
 "Assets/addItem.cs"
 "Assets/ClientQueue.cs"
 "Assets/clientScript.cs"
+"Assets/moneyUpdate.cs"
 -langversion:9.0
 /deterministic
 /optimize+
