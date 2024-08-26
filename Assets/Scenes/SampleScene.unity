@@ -893,7 +893,7 @@ Transform:
   m_GameObject: {fileID: 1191438347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9377956, y: 3.04, z: 12.746211}
+  m_LocalPosition: {x: 5.64, y: 3.04, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -913,8 +913,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zOffset: 2
   spawnPrefab: {fileID: 839644168309655089, guid: 2facabdd08eef5a40a8e2da43001fad4, type: 3}
-  queueLength: 10
+  queueLength: 5
   clientToActivate: {fileID: 0}
+  isInfinite: 1
 --- !u!1 &1371412033
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +976,7 @@ Transform:
   m_GameObject: {fileID: 1938754363}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.467037, y: 36.575665, z: 18.48}
+  m_LocalPosition: {x: 40.467037, y: 36.575665, z: 22.34}
   m_LocalScale: {x: 17.79132, y: 0.62288, z: 18.14574}
   m_ConstrainProportionsScale: 0
   m_Children: []

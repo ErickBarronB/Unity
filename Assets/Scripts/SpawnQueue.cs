@@ -15,6 +15,7 @@ public class SpawnQueue : MonoBehaviour
     private clientScript scriptToActivate;
     private Vector3 spawnPosition;
     public GameObject clientToActivate;
+    public bool isInfinite;
 
     private void Awake()
     {
@@ -88,7 +89,7 @@ public class SpawnQueue : MonoBehaviour
         Debug.Log("Clients in queue" + clientQueue.Count);
 
         }
-        if ((clientQueue.Count + 1) < queueLength)
+        if ((clientQueue.Count + 1) < queueLength && isInfinite)
         {
             clientToActivate.transform.position -= new Vector3(0, 0, zOffset);
             Debug.Log("gello");
