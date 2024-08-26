@@ -60,10 +60,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ClientQueue.cs" />
-    <Compile Include="Assets\clientScript.cs" />
-    <Compile Include="Assets\addItem.cs" />
-    <Compile Include="Assets\moneyUpdate.cs" />
+    <Compile Include="Assets\Scripts\moneyUpdate.cs" />
+    <Compile Include="Assets\Scripts\addItem.cs" />
+    <Compile Include="Assets\Scripts\clientScript.cs" />
+    <Compile Include="Assets\Scripts\SpawnQueue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
